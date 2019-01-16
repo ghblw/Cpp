@@ -54,6 +54,7 @@ class Computer {
         cout << "~Computer" << endl;
     }
 };
+
 int main() {
     Computer c;
     return 0;

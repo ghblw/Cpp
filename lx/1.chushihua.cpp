@@ -14,25 +14,8 @@ using std::cout;
 using std::endl;
 using std::string;
 
-class Parent {
-    protected :
-    int i;
-    public:
-    Parent(int v = 0) {
-        i = v;
-    }
-};
-class Child : public Parent {
-    public:
-    Child() : Parent(5) {
-        cout << "Child()" << endl;
-    }
-    int getI() {
-        return i;
-    }
-};
-
 int main() {
-    Child c;
-    cout << c.getI() << endl;
+    int a = 0;
+    int b(1);
+    int c = {3};
 }

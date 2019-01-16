@@ -1,8 +1,8 @@
 /*************************************************************************
-	> File Name: lx.cpp
+	> File Name: ac.cpp
 	> Author:yuxiaowei 
 	> Mail:1147407739@qq.com 
-	> Created Time: 2019年01月01日 星期二 02时16分44秒
+	> Created Time: 2019年01月15日 星期二 11时35分38秒
  ************************************************************************/
 
 #include <iostream>
@@ -14,25 +14,25 @@ using std::cout;
 using std::endl;
 using std::string;
 
-class Parent {
-    protected :
-    int i;
+class Test {
+    private:
+    int a;
     public:
-    Parent(int v = 0) {
-        i = v;
+    Test() {
+        //a = 10;
+        cout << "Test() " << a << endl;
+    }
+    Test(int value) {
+        a = value;
+        cout << "Test(int)" << a << endl;
+    }
+    int getA() {
+        return a;
     }
 };
-class Child : public Parent {
-    public:
-    Child() : Parent(5) {
-        cout << "Child()" << endl;
-    }
-    int getI() {
-        return i;
-    }
-};
-
+Test t1;
 int main() {
-    Child c;
-    cout << c.getI() << endl;
+    Test t(1);
+    Test t2 = 100;
+    Test t3;
 }

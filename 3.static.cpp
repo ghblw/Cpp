@@ -20,8 +20,9 @@ class Test {
         static int cnt;
         int m;
     public:
-    static int getCnt() {
-        return m;
+    static int getCnt(Test &t, int v) {
+        t.m = v;
+        return cnt;
     }
     Test() {
         m = 1;
